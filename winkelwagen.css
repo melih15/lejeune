@@ -1,0 +1,133 @@
+*{
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root{
+	--hue: 223;
+	--bg: hsl(var(--hue),10%,100%);
+	--fg: hsl(var(--hue),10%,0%);
+	--primary: hsl(var(--hue),90%,55%);
+	--primary: hsl(var(--hue),90%,55%,0);
+	--transDur: 0.3s;
+	font-size: calc(16px +(32 - 16) * (100vw - 320px) / (1280 - 320)); 
+}
+
+html,
+body {
+	background-color: var(--bg);
+}
+
+body,
+input {
+	font: 1em/1.5 Fredoka, sans-serif;
+}
+
+body{
+	color: var(--fg);
+	height: 100vh;
+	display: grid;
+	place-items: center;
+    
+}
+
+.theme {
+	display: flex;
+	align-items: center;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.theme_fill,
+.theme_icon {
+	transition: transform var(--transDur) ease-in-out;
+}
+
+.theme_fill {
+	background-color: var(--bg);
+	display: block;
+	mix-blend-mode: difference;
+	position: fixed;
+	inset: 0;
+	height: 100%;
+	transform: translateX(-100%);
+}
+
+.theme_icon,
+.theme_toggle {
+	z-index: 1;
+}
+
+.theme_icon,
+.theme_icon-part {
+	position: absolute;
+}
+
+.theme_icon {
+	display: block;
+	top: 0.75em;
+	left: 0.75em;
+	width: 1.5em;
+	height: 1.5em;
+}
+
+.theme_icon-part {
+	border-radius: 50%;
+	box-shadow: 0.4em -0.4em 0 0.5em hsl(0, 0%, 100%) inset;
+	top: calc(50% - 0.5em);
+	left: calc(50% - 0.5em);
+	width: 1em;
+	height: 1em;
+	transition: 
+        box-shadow var(--transDur) ease-in-out,
+		opacity var(--transDur) ease-in-out,
+		transform var(--transDur) ease-in-out; 
+	transform: scale(0.5); 
+}
+
+.theme_icon-part ~ .theme_icon-part {
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 0.05em;
+	box-shadow: none;
+	top: 50%;
+	left: calc(50% - 0.05em);
+	transform: rotate(0deg) translateY(0.5em);
+	transform-origin: 50% 0;
+	width: 0.1em;
+	height: 0.2em;
+}
+
+.theme_icon-part:nth-child(3) {
+	transform: rotate(45deg) translateY(0.5em);
+}
+
+.theme_icon-part:nth-child(4) {
+	transform: rotate(90deg) translateY(0.5em);
+}
+
+.theme_icon-part:nth-child(5) {
+	transform: rotate(135deg) translateY(0.5em);
+}
+
+.theme_icon-part:nth-child(6) {
+	transform: rotate(180deg) translateY(0.5em);
+}
+
+.theme_icon-part:nth-child(7) {
+	transform: rotate(225deg) translateY(0.5em);
+}
+
+.theme_icon-part:nth-child(8) {
+	transform: rotate(270deg) translateY(0.5em);
+}
+
+.theme_icon-part:nth-child(9) {
+	transform: rotate(315deg) translateY(0.5em);
+}
+
+.theme_label,
+.theme_toggle,
+.theme_toggle-wrap {
+	position: relative;
+}

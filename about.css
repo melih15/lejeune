@@ -1,0 +1,19 @@
+.row-about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+}
+
+.container-about {
+    padding: 16px;
+}

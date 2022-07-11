@@ -1,0 +1,49 @@
+#tb-name {
+    float: right;
+    font-size: 20px;
+}
+
+#tb-box {
+    height: 22px;
+    width: 200px;
+}
+
+#st {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#st-btn {
+    text-align: center;
+    padding: 10px 21px 10px 21px;
+    background-color: #3498DB;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#st-btn:hover {
+    color: #3498DB;
+    background: #fff;
+    transition: 1s;
+}
+
+td.t-1 {
+    float: left;
+    width: 44%;
+    text-align: right;
+    color: #C5EFF7;
+}
+
+.formulier {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio {
+    flex-direction: row;
+}
