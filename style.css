@@ -1,0 +1,56 @@
+h2 {
+	text-align: center;
+	margin: 2rem 0;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 30rem;
+	gap: 1rem;
+}
+
+.newContainer {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+h3 {
+	margin: 2rem 0;
+}
+
+input form {
+	width: 100%;
+}
+
+.row {
+	display: flex;
+	justify-content: space-around;
+}
+
+.tab {
+	display: flex;
+	justify-content: center;
+}
+
+#overlay,
+#overlay1,
+#overlay2,
+#overkapping,
+#vrijstaander,
+#carport,
+#schuifwanden,
+#schuifpui {
+	display: none;
+}
+
+@media screen and (max-width: 800px) {
+	.row {
+		display: flex;
+		flex-direction: column;
+	}
+	.card {
+		margin-bottom: 5rem;
+	}
+}
